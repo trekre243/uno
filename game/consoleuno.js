@@ -23,7 +23,7 @@ unoGame.on('newtopcard', card => {
 });
 
 unoGame.on('moverequest', player => {
-    console.log("It's is your turn", player.playerID);
+    console.log("It is your turn", player.playerID);
     console.log(`Top card: ${topCard.color} ${topCard.name}`);
     console.log('Your cards:')
     for(let i = 0; i < player.hand.cards.length; i++) {
@@ -115,7 +115,7 @@ unoGame.on('selectwildcolor', player => {
     console.log('The first card is a wild');
     console.log(`${player.playerID} must select first card to play`)
     for(let i = 0; i < player.hand.cards.length; i++) {
-        let card = players.hand.cards[i];
+        let card = player.hand.cards[i];
         console.log(`${i} ${card.color} ${card.name}`);
     }
     rl.question(`Which card do you want to play?`, selection => {

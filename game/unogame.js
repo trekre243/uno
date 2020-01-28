@@ -95,7 +95,7 @@ module.exports = class UnoGame extends EventEmitter {
 
     //handle logic associtated with wild and action cards
     firstDiscard(card) {
-        switch(this.discardPile.top) {
+        switch(card.name) {
             //if the first discard card is a skip then mark that the following turn needs to be skipped
             case 'skip':
                 this.skipNextTurn = true;
@@ -211,6 +211,7 @@ module.exports = class UnoGame extends EventEmitter {
                 //if the first discard was a skip then skip turn of player after dealer
                 if(this.skipNextTurn) {
                     this.skipNextTurn = false;
+                    this.emit('skipturn', this.players[this.playerTurnI]);
                     this.incTurn();
                 }
 
