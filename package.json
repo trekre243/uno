@@ -12,7 +12,7 @@
   "dependencies": {
     "events": "^3.1.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.10",
-    "shuffle-array": "^1.0.1"
+    "shuffle-array": "^1.0.1",
+    "socket.io": "^2.3.0"
   }
 }
